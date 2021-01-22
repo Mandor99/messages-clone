@@ -1,0 +1,9 @@
+.messenger {
+    display: flex;
+}
+
+@media all and (max-width: 540px) {
+    .messenger {
+        flex-direction: column;
+    }
+}

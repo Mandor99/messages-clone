@@ -1,0 +1,57 @@
+.mini-chat {
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+    position: relative;
+    padding: 10px;
+    color: var(--txtColor);
+    cursor: pointer;
+    transition: background-color .2s ease;
+}
+.mini-chat:hover {
+    background-color: var(--msgColor-2);
+}
+.mini-chat:not(:last-of-type) {
+    border-bottom: 1px solid #1f2833;
+}
+
+@media all and (max-width: 540px) {
+    .mini-chat {
+        flex-direction: column;
+        border-bottom: none;
+    }
+}
+.mini-chat__user-name {
+    font-size: 1rem;
+    text-transform: capitalize;
+}
+@media all and (max-width: 540px) {
+    .mini-chat__user-name {
+        font-weight: 400;
+    }
+}
+.mini-chat__lastMsg {
+    font-size: .9rem;
+}
+
+@media all and (max-width: 540px) {
+    .mini-chat__lastMsg {
+        visibility: hidden;
+        width: 0;
+        height: 0;
+    }
+}
+
+.mini-chat__timestamp {
+    position: absolute;
+    top: 15px;
+    right: 10px;
+}
+
+@media all and (max-width: 540px) {
+    .mini-chat__timestamp {
+        visibility: hidden;
+        width: 0;
+        height: 0;
+    }
+}

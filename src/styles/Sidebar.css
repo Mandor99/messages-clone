@@ -1,0 +1,92 @@
+.sidebar {
+    /* flex: .35; */
+    flex-basis: 33.333%;
+    height: 100vh;
+    background-color: var(--mainColor);
+    /* border-right: 1px solid lightgrey; */
+    box-shadow: 5px 0 5px  rgba(255, 255, 255, .3);
+    display: flex;
+    flex-direction: column;
+    /* color: #fff; */
+}
+@media all and (max-width: 540px) {
+    .sidebar {
+        flex: 1 1 100%;
+    }
+}
+.sidebar__navbar {
+    display: flex;
+    align-items: center;
+    height: 10vh;
+    padding: 10px;
+    gap: .5rem;
+    justify-content: space-between;
+    /* background-color: #282828; */
+    color: var(--txtColor);
+    box-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2),
+                0px 4px 5px 0px rgba(0,0,0,0.14),
+                0px 1px 10px 0px rgba(0,0,0,0.12);
+}
+
+.sidebar__wrapper--input {
+    display: flex;
+    align-items: center;
+    background-color: var(--darkColor);
+    border: 1px solid rgba(194, 202, 208, .2);
+    border-radius: 5px;
+    color: var(--txtColor);
+}
+@media all and (max-width:540px) {
+    .sidebar__wrapper--input {
+        flex: .7;
+    }
+}
+.sidebar__wrapper--input > input {
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 1rem;
+    font-weight: 500;
+    opacity: .8;
+    color: inherit;
+    padding: 0 10px;
+    flex: 1;
+}
+
+.sidebar__chats {
+    /* padding: 10px; */
+    overflow: auto;
+}
+@media all and (max-width: 540px) {
+    .sidebar__chats {
+        overflow: hidden;
+        overflow-x: auto;
+        display: flex;
+    }
+}
+.sidebar__chats::-webkit-scrollbar {
+    width: .3em;
+}
+.sidebar__chats::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+.sidebar__chats::-webkit-scrollbar-thumb {
+    background-color: var(--txtColor);
+    /* outline: 1px solid #c2cad0; */
+    /* background-color: transparent; */
+    outline: none;
+}
+@media all and (max-width:540px) {
+    .sidebar__chats::-webkit-scrollbar {
+        /* width: none; */
+        height: .3em;
+    }
+    .sidebar__chats::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        box-shadow: none;
+    }
+    .sidebar__chats::-webkit-scrollbar-thumb {
+        /* background-color: transparent; */
+        outline: none;
+    }
+}

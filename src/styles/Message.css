@@ -1,0 +1,37 @@
+.msg {
+    display: flex;
+    align-items: center;
+    margin: 1rem;
+    position: relative;
+    width: fit-content
+}
+.msg__content {
+    background-color: var(--msgColor-2);
+    border-radius: 50px;
+    padding: 1rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin: 10px;
+    margin-right: auto;
+}
+.msg__time {
+    position: absolute;
+    right: 1rem;
+    bottom: -1rem;
+    width: max-content;
+}
+.msg--sender {
+    margin-left: auto;
+}
+.msg--sender .msg__content {
+    margin-left: auto;
+    background-color: var(--msgColor-1);
+    /* color: #fff; */
+}
+.msg--sender .msg__time {
+    left: 1rem;
+}
+.msg--sender .msg__pic {
+    order: 1;
+    margin: 0 1rem;
+}
